@@ -1,0 +1,72 @@
+html, body {
+  margin: 0px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.window {
+  background-color: beige;
+  padding: 10px;
+  flex: 1;
+}
+
+.Butt {
+  font-weight: normal; /*работа с текстом*/
+  color: white;
+  text-decoration: none;
+  padding: 0.8em 1em calc(0.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64, 199, 129);
+  box-shadow: 0 -3px rgb(53, 167, 110) inset;
+  transition: 0.2s;
+}
+.Butt:hover {
+  background: rgb(53, 167, 110);
+}
+.Butt:active {
+  background: rgb(33, 147, 90);
+  box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+.MainWind{
+display: flex;
+flex-direction: row;
+flex: 3;
+}
+
+#ListOfNote{
+background-color: cadetblue;
+flex: 3;
+height: 100%;
+overflow-y: scroll;
+margin: 0;
+}
+
+#Text{
+ flex: 7;
+ height: 100%;
+ overflow-y: scroll;
+ padding: 10px;
+ resize: none;
+ outline: none;
+ border: none;
+ margin: 0;
+ flex-direction: row;
+ font-size: 20px;
+}
+
+.Note{
+background-color: rgb(84, 214, 236);
+outline: none; /*обводка*/
+height: 75px;
+border-bottom: 1px solid; 
+margin-bottom: -1px;  /*отступы от соседних елементов*
+padding: 10px;  /*отступы внутренних елементов*/
+}
+
+.Note[choosen = true]{
+    background-color: crimson;
+}
