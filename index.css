@@ -15,6 +15,12 @@ html, body {
   font-size: 20px;
 }
 
+.PictureT{
+background: transparent;
+
+}
+
+  
 #TitleNote{
 text-decoration: underline;
 font-family: sans-serif;
