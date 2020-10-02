@@ -8,18 +8,13 @@ let link = window.location
 
 let noteArr = []
 
-function getData(){
-    let dat=new Date()
-    return  dat.toJSON().slice(0,4)+"."+dat.toJSON().slice(5,7)+"."+dat.toJSON().slice(8,10)+" "
-   +dat.toJSON().slice(11,19)
-}
 
 addButton.addEventListener("click", ()=>{
     const tempNote = new Note(Date.now(), "New note", "Your note", getData(), false )
     const li = document.createElement("LI")
     noteArr.push(tempNote)
     li.className = "Note"
-    li.innerHTML = tempNote.title+"<br>"+tempNote.time
+    li.innerHTML = NoHTML(tempNote.title)+"<br>"+tempNote.time
     li.setAttribute("Id", tempNote.id)
     listOfNote.insertBefore(li, listOfNote.firstChild)
 
@@ -83,7 +78,7 @@ textArea.addEventListener("input", ()=>{
             el.data = getData()
             el.title = textArea.value.split("\n")[0].substring(0, 20)
             const temp = document.getElementById(el.id)
-            temp.innerHTML = el.title+"<br>"+el.time
+            temp.innerHTML = NoHTML(el.title)+"<br>"+el.time
             link.hash = el.id+"/"+el.title
         }
     });
@@ -108,7 +103,7 @@ link.hash = ""
             temp.setAttribute("choosen", false)
         }
         listOfNote.insertBefore(temp, listOfNote.firstChild)
-        temp.innerHTML = el.title+"<br>"+el.time
+        temp.innerHTML = NoHTML(el.title)+"<br>"+el.time
     });
  }
  else{
@@ -125,7 +120,7 @@ window.onhashchange = function (){
       
        if(link.hash.substring(1, 14) == el.id){
            el.state = true
-           temp.innerHTML = el.title+"<br>"+el.time
+           temp.innerHTML = NoHTML(el.title)+"<br>"+el.time
            textArea.value = el.text
            temp.setAttribute("choosen", true) 
         }  
