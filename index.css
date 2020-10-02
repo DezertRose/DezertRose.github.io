@@ -1,6 +1,5 @@
 html, body {
   margin: 0px;
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -8,65 +7,82 @@ html, body {
 }
 
 .window {
-  background-color: beige;
-  padding: 10px;
+  background-color: rgb(148, 193, 245);
+  padding: 1px;
   flex: 1;
+  text-decoration: none;
+  color: darkblue;
+  font-size: 20px;
+}
+
+#TitleNote{
+text-decoration: underline;
+font-family: sans-serif;
+font-style: oblique;
 }
 
 .Butt {
-  font-weight: normal; /*работа с текстом*/
-  color: white;
-  text-decoration: none;
+  font-weight: 1000; /*работа с текстом*/
+  font-size: 12px;
   padding: 0.8em 1em calc(0.8em + 3px);
   border-radius: 3px;
-  background: rgb(64, 199, 129);
-  box-shadow: 0 -3px rgb(53, 167, 110) inset;
+  color: white;
+  text-decoration: none;
+  background: rgb(38, 102, 221);
+  box-shadow: 0 -3px rgb(43, 27, 133) inset;
   transition: 0.2s;
 }
 .Butt:hover {
-  background: rgb(53, 167, 110);
+  background: rgb(45, 199, 226);
 }
 .Butt:active {
-  background: rgb(33, 147, 90);
-  box-shadow: 0 3px rgb(33, 147, 90) inset;
+  background: rgb(24, 178, 224);
+  box-shadow: 0 3px rgb(55, 182, 233) inset;
 }
 
 .MainWind{
 display: flex;
 flex-direction: row;
-flex: 3;
+flex: 4;
+height: 80%;
 }
 
 #ListOfNote{
-background-color: cadetblue;
+background-color: rgba(8, 16, 92, 0.882);
 flex: 3;
 height: 100%;
 overflow-y: scroll;
+
 margin: 0;
+list-style-type: square;
 }
 
 #Text{
- flex: 7;
- height: 100%;
- overflow-y: scroll;
+ flex: 9;
+ background-color: rgba(8, 16, 92, 0.882);
+ color: floralwhite;
  padding: 10px;
  resize: none;
  outline: none;
  border: none;
  margin: 0;
  flex-direction: row;
+ overflow-y: scroll;
  font-size: 20px;
+ font-family: monospace;
 }
 
 .Note{
-background-color: rgb(84, 214, 236);
+flex-direction: column;
+flex-wrap: wrap;
+background-color: rgb(38, 101, 218);
 outline: none; /*обводка*/
 height: 75px;
 border-bottom: 1px solid; 
-margin-bottom: -1px;  /*отступы от соседних елементов*
+margin-bottom: 2px;  /*отступы от соседних елементов*/
 padding: 10px;  /*отступы внутренних елементов*/
 }
 
 .Note[choosen = true]{
-    background-color: crimson;
+    background-color: rgba(78, 199, 255, 0.945);
 }
